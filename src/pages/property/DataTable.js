@@ -33,9 +33,9 @@ const getStatusColor = (status) => {
   return "black"; // Default color
 };
 
-function createData(id, name, Location, status, action) {
-  return { id, name, Location, status, action };
-}
+// function createData(id, name, Location, status, action) {
+//   return { id, name, Location, status, action };
+// } 
 
 export default function StickyHeadTable({ setProperty, setPropertyName }) {
   // const rows = [

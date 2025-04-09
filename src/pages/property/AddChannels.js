@@ -110,7 +110,7 @@ const AddChannels = ({ setChannel, onRoomAdded }) => {
         success: function (response) {
           // console.log(response.success);
           // setOta(response);
-          if (response.success == false) {
+          if (response.success === false) {
             // console.log('hi');
             Swal.fire({
               icon: "error",

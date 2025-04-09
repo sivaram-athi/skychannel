@@ -41,7 +41,7 @@ const AddRatePlan = ({ setEditRate, onRoomAdded, editRateId, id }) => {
   const [paxMin, setPaxMin] = useState("");
   const [paxMax, setPaxMax] = useState("");
   const [mealOptions, setMealOptions] = useState([]);
-  const [channelRate, setChannelRate] = useState([]);
+  // const [channelRate, setChannelRate] = useState([]);
   const [channel, setChannel] = useState([]);
   const [inputValues, setInputValues] = useState({});
 
@@ -271,7 +271,7 @@ const AddRatePlan = ({ setEditRate, onRoomAdded, editRateId, id }) => {
       data: data,
     })
       .then((res) => {
-        if (res.data.success == true) {
+        if (res.data.success === true) {
           Swal.fire({
             icon: "success",
             title: "Success",

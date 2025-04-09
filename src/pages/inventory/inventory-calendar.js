@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Box, Checkbox, Paper, Typography, IconButton, Button, FormControlLabel, Grid } from "@mui/material"
-import { ChevronLeft, ChevronRight, Search, Close } from "@mui/icons-material"
+import { ChevronLeft, ChevronRight, Close } from "@mui/icons-material"
 
 const platforms = [
   {

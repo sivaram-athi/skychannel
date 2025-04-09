@@ -6,7 +6,7 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Swal from "sweetalert2";
 import axios from "axios";
-import Tabtwo from "./Tabtwo";
+// import Tabtwo from "./Tabtwo";
 import $ from "jquery";
 
 const Container = styled.div`
@@ -240,7 +240,7 @@ const AddRoom = ({ setEdit, onRoomAdded, id }) => {
       data: formData,
     })
       .then((res) => {
-        if (res.data.success == true) {
+        if (res.data.success === true) {
           Swal.fire({
             icon: "success",
             title: "Success",

@@ -4,23 +4,23 @@ import {Tab} from "@mui/material";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
-import { styled } from "@mui/material/styles";
-import {Paper} from "@mui/material";
+// import { styled } from "@mui/material/styles";
+// import {Paper} from "@mui/material";
 import Recent_booking from "./Recent_booking";
 import Todays_arrival from "./Todays_arrival";
 import Weekly_arrival from "./Weekly_arrival";
-import Pms_report from "./Pms_report";
+// import Pms_report from "./Pms_report";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-  ...theme.applyStyles("dark", {
-    backgroundColor: "#1A2027",
-  }),
-}));
+// const Item = styled(Paper)(({ theme }) => ({
+//   backgroundColor: "#fff",
+//   ...theme.typography.body2,
+//   padding: theme.spacing(1),
+//   textAlign: "center",
+//   color: theme.palette.text.secondary,
+//   ...theme.applyStyles("dark", {
+//     backgroundColor: "#1A2027",
+//   }),
+// }));
 
 export default function Bookings(props) {
   const [value, setValue] = React.useState("1");

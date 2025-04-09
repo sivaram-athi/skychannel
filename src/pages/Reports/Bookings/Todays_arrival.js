@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Box, Grid, Stack, Typography } from "@mui/material";
-import { Gauge } from "@mui/x-charts/Gauge";
-import ProgressBar from "./ProgressBar";
-import RoomTypeCard from "./RoomTypeCard";
-import { motion } from "framer-motion";
+import { Box, Typography } from "@mui/material";
+// import { Gauge } from "@mui/x-charts/Gauge";
+// import ProgressBar from "./ProgressBar";
+// import RoomTypeCard from "./RoomTypeCard";
+// import { motion } from "framer-motion";
 import "./TodaysArrival.css";
 import axios from "axios";
 import { PieChart } from "@mui/x-charts/PieChart";
 
 const TodaysArrival = () => {
-  const [gaugeValue, setGaugeValue] = useState(0);
-  const [roomTypes, setRoomTypes] = useState([]);
+  const [setGaugeValue] = useState(0);
+  // const [roomTypes, setRoomTypes] = useState([]);
   const [channelData, setChannelData] = useState([]);
   const [channelData1, setChannelData1] = useState([]);
   const [selectedView, setSelectedView] = useState("booking");
@@ -105,8 +105,7 @@ const TodaysArrival = () => {
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
 
-    return `rgb(${r}, ${g}, ${b})`;
-    t;
+    return `rgb(${r}, ${g}, ${b})`; 
   };
 
   const handleViewChange = (e) => {

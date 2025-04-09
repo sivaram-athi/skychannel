@@ -31,7 +31,7 @@ function Row(props) {
   const { setEditRate } = row;
   const { setPlanDel } = row;
   const { setEditId } = row;
-  const { setChannel } = row;
+  // const { setChannel } = row;
   const [open, setOpen] = React.useState(false);
   return (
     <React.Fragment>

@@ -18,11 +18,11 @@ const RateManagement = () => {
     Sun: true,
   });
 
-  const [isAccordionOpen, setIsAccordionOpen] = useState(false);
+  // const [isAccordionOpen, setIsAccordionOpen] = useState(false);
   const currentDate = new Date();
   const nextMonthDate = new Date(currentDate);
   nextMonthDate.setMonth(currentDate.getMonth() + 1);
-  const [ratePlan, setRatePlan] = useState("Canyon King - CP");
+  // const [ratePlan, setRatePlan] = useState("Canyon King - CP");
   const [property, setProperty] = useState("Canyon Sun Hotel");
   const [room, setRoom] = useState([]);
   const [startDate, setStartDate] = useState(
@@ -38,11 +38,11 @@ const RateManagement = () => {
       nextMonthDate.toISOString().split("T")[0]
     )
   );
-  const [rates, setRates] = useState([]);
+  // const [rates, setRates] = useState([]);
   const [rows, setRows] = useState();
-  const [isStopSell, setIsStopSell] = useState(0);
-  const [isExtraChild, setIsExtraChild] = useState(0);
-  const [isExtraPax, setIsExtraPax] = useState(0);
+  // const [isStopSell, setIsStopSell] = useState(0);
+  // const [isExtraChild, setIsExtraChild] = useState(0);
+  // const [isExtraPax, setIsExtraPax] = useState(0);
   const [stopSellValues, setStopSellValues] = useState({});
   const [planID, setPlanID] = useState("0");
   const [getPlan, setGetPlan] = useState();

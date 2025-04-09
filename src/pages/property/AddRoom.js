@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
@@ -6,7 +6,7 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Swal from "sweetalert2";
 import axios from "axios";
-import Tabtwo from "./Tabtwo";
+// import Tabtwo from "./Tabtwo";
 
 const Container = styled.div`
   max-width: 1200px;
@@ -202,7 +202,7 @@ const AddRoom = ({ setRoom, onRoomAdded }) => {
       data: formData,
     })
       .then((res) => {
-        if (res.data.success == true) {
+        if (res.data.success === true) {
           Swal.fire({
             icon: "success",
             title: "Success",

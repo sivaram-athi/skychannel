@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "./Calender.css";
 import $ from "jquery";
-import Inventory from "./Inventory";
+// import Inventory from "./Inventory";
 import ToggleSwitch from "../inventory/ToggleSwitch";
 import Swal from "sweetalert2";
 import {
@@ -31,30 +31,30 @@ const HotelInventoryManager = () => {
   const [room, setRoom] = useState("0");
   const [loading, setLoading] = useState(true);
   const [loading1, setLoading1] = useState(true);
-  const [inputValues, setInputValues] = useState({});
+  const [setInputValues] = useState({});
   const [loading2, setLoading2] = useState(true);
   const [header, setHeader] = useState();
 
   const days = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
 
-  const roomTypes = [
-    {
-      platform: "Booking.com",
-      rooms: ["1 Double Room"],
-    },
-    {
-      platform: "Agoda",
-      rooms: ["1 Standard Double Room"],
-    },
-    {
-      platform: "EaseMyTrip",
-      rooms: ["1 Platinum Room"],
-    },
-    {
-      platform: "GOIBIBO",
-      rooms: ["1 Platinum Room"],
-    },
-  ];
+  // const roomTypes = [
+  //   {
+  //     platform: "Booking.com",
+  //     rooms: ["1 Double Room"],
+  //   },
+  //   {
+  //     platform: "Agoda",
+  //     rooms: ["1 Standard Double Room"],
+  //   },
+  //   {
+  //     platform: "EaseMyTrip",
+  //     rooms: ["1 Platinum Room"],
+  //   },
+  //   {
+  //     platform: "GOIBIBO",
+  //     rooms: ["1 Platinum Room"],
+  //   },
+  // ];
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
@@ -153,16 +153,16 @@ const HotelInventoryManager = () => {
       success: function (response) {
         // console.log(response);
         response.data.map((e) => {
-          if (e.scotartypetrnid == null) {
+          if (e.scotartypetrnid === null) {
             unmappedRoom.push(e.roomtypeid);
           }
         });
         console.log(unmappedRoom);
-        if (unmappedRoom == "") {
+        if (unmappedRoom === "") {
           // console.log('hi');
           setMap(0);
           // console.log(map);
-          if (response.test != "") {
+          if (response.test !== "") {
             // console.log('test');
             setMap(1);
             const roomRows = response.test.map((e) => ({
@@ -253,7 +253,7 @@ const HotelInventoryManager = () => {
     }
     console.log(updatedValues);
     console.log(test);
-    if (test == 0) {
+    if (test === 0) {
       $.ajax({
         url: "https://beedesk.skyhms.in/skychnl/store_inventory_room_channel",
         type: "POST",
@@ -262,7 +262,7 @@ const HotelInventoryManager = () => {
         },
         dataType: "json",
         success: function (response) {
-          if (response.success == true) {
+          if (response.success === true) {
             Swal.fire({
               icon: "success",
               title: "Success",
@@ -332,7 +332,7 @@ const HotelInventoryManager = () => {
             </div>
           </div>
         </div>
-        {room != 0 && (
+        {room !== 0 && (
           <div className="main-content1">
             <div className="inventory-section" style={{ width: "100%" }}>
               <div className="card">
@@ -417,7 +417,7 @@ const HotelInventoryManager = () => {
         </div> */}
           </div>
         )}
-        {room == 0 && (
+        {room === 0 && (
           <div
             style={{
               display: "flex",

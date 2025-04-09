@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import $ from "jquery";
@@ -39,7 +39,7 @@ const RateManagement = () => {
   const [header, setHeader] = useState();
   const [isCutOff, setIsCutOff] = useState(0);
   const [isSoldCount, setIsSoldCount] = useState(0);
-  const [inputValues, setInputValues] = useState({});
+  const [setInputValues] = useState({});
   const [startDate, setStartDate] = useState(
     currentDate.toISOString().split("T")[0]
   );
@@ -55,8 +55,8 @@ const RateManagement = () => {
   );
   const [stopSellValues, setStopSellValues] = useState({});
   const [cutOffValues, setCutOffValues] = useState({});
-  const [rates, setRates] = useState([]);
-  const [output, setOutput] = useState();
+  // const [rates, setRates] = useState([]);
+  const [setOutput] = useState();
 
   const [focusedInput, setFocusedInput] = useState({
     rowIndex: null,
@@ -223,7 +223,7 @@ const RateManagement = () => {
       }
     }
     console.log(updatedValues);
-    if (test == 0) {
+    if (test === 0) {
       $.ajax({
         url: "https://beedesk.skyhms.in/skychnl/store_inventory_room_channel",
         type: "POST",
@@ -232,7 +232,7 @@ const RateManagement = () => {
         },
         dataType: "json",
         success: function (response) {
-          if (response.success == true) {
+          if (response.success === true) {
             Swal.fire({
               icon: "success",
               title: "Success",
@@ -411,7 +411,7 @@ const RateManagement = () => {
       },
       dataType: "json",
       success: function (response) {
-        if (response.data == "") {
+        if (response.data === "") {
           fetchData(room);
         } else {
           setOutput(response.data);
@@ -457,11 +457,11 @@ const RateManagement = () => {
           }
         });
         console.log(unmappedRoom);
-        if (unmappedRoom == "") {
+        if (unmappedRoom === "") {
           // console.log('hi');
           setMap(0);
           // console.log(map);
-          if (response.test != "") {
+          if (response.test !== "") {
             console.log(response.test);
             
             const roomRows = response.test.map((e) => ({
@@ -504,7 +504,7 @@ const RateManagement = () => {
             },
             dataType: "json",
             success: function (response) {
-              if (response.data != "") {
+              if (response.data !== "") {
                 const roomRows = response.data.map((e) => ({
                   id: e.roomtypeid,
                   name: e.roomtypename,
@@ -558,7 +558,7 @@ const RateManagement = () => {
       },
       dataType: "json",
       success: function (response) {
-        if (response.data == "") {
+        if (response.data === "") {
           fetchData(room);
         } else {
           setOutput(response.data);
@@ -592,7 +592,7 @@ const RateManagement = () => {
       },
       dataType: "json",
       success: function (response) {
-        if (response.success == true) {
+        if (response.success === true) {
           Swal.fire({
             icon: "success",
             title: "Success",
@@ -610,7 +610,7 @@ const RateManagement = () => {
           },
           dataType: "json",
           success: function (response) {
-            if (response.data == "") {
+            if (response.data === "") {
               fetchData(room);
             } else {
               setOutput(response.data);
@@ -649,7 +649,7 @@ const RateManagement = () => {
   if (loading1) {
     return <div>Loading...</div>;
   }
-  if (unmappedRoom != "") {
+  if (unmappedRoom !== "") {
     if (loading2) {
       return <div>Loading...</div>;
     }
@@ -878,7 +878,7 @@ const RateManagement = () => {
                       })}
                     </tr>
                   ))}
-                  {isCutOff == 1 &&
+                  {isCutOff === 1 &&
                     ["Cut Off"].map((type) => (
                       <tr key={type}>
                         <td className="room-type">{type}</td>
@@ -897,7 +897,7 @@ const RateManagement = () => {
                         })}
                       </tr>
                     ))}
-                  {isSoldCount == 1 &&
+                  {isSoldCount === 1 &&
                     ["Sold Count"].map((type) => (
                       <tr key={type}>
                         <td className="room-type">{type}</td>

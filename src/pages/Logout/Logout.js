@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const Logout = () => {
   axios.get("https://beedesk.skyhms.in/skychnl/logout").then((response) => {
     console.log(response.data);
-    if (response.data.success == true) {
+    if (response.data.success === true) {
       Swal.fire({
         icon: "success",
         title: "Success",

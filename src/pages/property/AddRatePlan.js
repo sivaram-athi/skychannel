@@ -172,7 +172,7 @@ const AddRatePlan = ({ setPlan, id, onRoomAdded }) => {
       data: data,
     })
       .then((res) => {
-        if (res.data.success == true) {
+        if (res.data.success === true) {
           Swal.fire({
             icon: "success",
             title: "Success",

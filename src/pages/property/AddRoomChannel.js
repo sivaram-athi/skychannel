@@ -112,7 +112,7 @@ const AddRoomChannel = ({ setChannel, id, onRoomAdded }) => {
       },
     })
       .then((res) => {
-        if (res.data.success == true) {
+        if (res.data.success === true) {
           Swal.fire({
             icon: "success",
             title: "Success",

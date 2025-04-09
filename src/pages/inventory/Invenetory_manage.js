@@ -10,7 +10,7 @@ import { Divider } from "@mui/material";
 
 const Invenetory_manage = () => {
   const [open, setOpen] = React.useState(false);
-  const [switchState, setSwitchState] = React.useState(false);
+  // const [switchState, setSwitchState] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);

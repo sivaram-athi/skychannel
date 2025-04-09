@@ -134,7 +134,7 @@ const EditChannel = ({ id, setEdit, onRoomAdded }) => {
         success: function (response) {
           // setOta(response);
           // console.log(response);
-          if (response.success == false) {
+          if (response.success === false) {
             // console.log('hi');
             Swal.fire({
               icon: "error",

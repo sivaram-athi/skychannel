@@ -12,9 +12,7 @@ import {
   TableHead,
   TableRow,
   Paper,
-  TextField,
   Box,
-  useMediaQuery,
 } from "@mui/material";
 import { styled } from "@mui/system";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -56,7 +54,7 @@ const HotelRateManager = () => {
   const [loading, setLoading] = useState(true);
   const [loading1, setLoading1] = useState(true);
   const [rows, setRows] = useState();
-  const [planID, setPlanID] = useState("0");
+  const [planID] = useState("0");
   const [room, setRoom] = useState({});
   const [extraPaxState, setExtraPaxState] = useState({});
   const [extraChildState, setExtraChildState] = useState({});
@@ -420,7 +418,7 @@ const HotelRateManager = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth="lg">
-        {form == 0 && (
+        {form === 0 && (
           <Grid container spacing={2}>
             <Grid item xs={12} md={12}>
               <Box
@@ -477,7 +475,7 @@ const HotelRateManager = () => {
             </Grid>
           </Grid>
         )}
-        {form != 0 && <MultipleRate setForm={setForm} />}
+        {form !== 0 && <MultipleRate setForm={setForm} />}
       </Container>
     </ThemeProvider>
   );

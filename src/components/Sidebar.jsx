@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
-import { NavLink, useLocation } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { FaBars, FaChevronDown } from "react-icons/fa"
-import { FaTh, FaCommentAlt, FaShoppingBag, FaThList } from "react-icons/fa"
+import { FaTh } from "react-icons/fa"
 import ApartmentIcon from "@mui/icons-material/Apartment"
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee"
 import DescriptionIcon from "@mui/icons-material/Description"
-import LayersIcon from "@mui/icons-material/Layers"
+// import LayersIcon from "@mui/icons-material/Layers"
 import BarChartIcon from "@mui/icons-material/BarChart"
 import Logo from "../images/icons/skyrooms-logo.png"
 import LogoutIcon from '@mui/icons-material/Logout'
@@ -14,9 +14,9 @@ import WarehouseIcon from '@mui/icons-material/Warehouse'
 
 const Sidebar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(true)
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
+  const [setIsMobile] = useState(window.innerWidth <= 768)
   const [openSubmenu, setOpenSubmenu] = useState(null)
-  const location = useLocation()
+  // const location = useLocation()
 
   useEffect(() => {
     const handleResize = () => {
