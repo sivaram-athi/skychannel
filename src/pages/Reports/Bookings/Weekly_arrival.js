@@ -63,11 +63,7 @@ const WeeklyArrival = () => {
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
 
-<<<<<<< HEAD
     return `rgb(${r}, ${g}, ${b})`; 
-=======
-    return `rgb(${r}, ${g}, ${b})`;
->>>>>>> 1d15f40662ea1fe1ed587ff798aa7a09ff18a0b4
   };
 
   const RADIAN = Math.PI / 180;
